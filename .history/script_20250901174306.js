@@ -129,21 +129,16 @@ function calculateAge(birthDate) {
 
   return age;
 }
+
 users.sort((a, b) => a.id - b.id);
 
-const age = calculateAge();
+const age = verifAge(users);
 
 const newusers = users.map((users) => ({
   id: users.id,
   nameComplet: `${users.firstName} ${users.lastName}`,
   age: calculateAge(users.birthDate),
+  adult: age >= 18 ? "yes" : "no",
 }));
 
-const users2 = newusers.map((newusers) => ({
-  id: newusers.id,
-  nameComplet: newusers.nameComplet,
-  age: newusers.age,
-  adult: newusers.age >= 18 ? "yes" : "no",
-}));
-
-console.log(users2);
+console.log(newusers);

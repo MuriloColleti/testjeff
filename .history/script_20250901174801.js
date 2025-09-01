@@ -142,7 +142,8 @@ const newusers = users.map((users) => ({
 const users2 = newusers.map((newusers) => ({
   id: newusers.id,
   nameComplet: newusers.nameComplet,
-  age: newusers.age,
+
+
   adult: newusers.age >= 18 ? "yes" : "no",
 }));
 

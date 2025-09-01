@@ -137,13 +137,7 @@ const newusers = users.map((users) => ({
   id: users.id,
   nameComplet: `${users.firstName} ${users.lastName}`,
   age: calculateAge(users.birthDate),
-}));
-
-const users2 = newusers.map((newusers) => ({
-  id: newusers.id,
-  nameComplet: newusers.nameComplet,
-  age: newusers.age,
   adult: newusers.age >= 18 ? "yes" : "no",
 }));
 
-console.log(users2);
+console.log(newusers);
